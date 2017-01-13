@@ -20,10 +20,10 @@ data Action =
     Lambda [Expr] Action | Let [Assignment] Expr
     Loop Int Action
 
-data Expr = Var Name Type | Res Action Expr | Tup Expr
+data Expr = Var Name Type | Res Action Expr | Tup [Expr]
 data Assignment = Assign Expr Expr
 
 data MVariant = Par | Pipe | Seq
 data FVariant = Tree | Pipe | Seq
 
-type TyTraHLLProgram = Action
+type TyTraHLLProgram = Assignment
