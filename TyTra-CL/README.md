@@ -1,10 +1,5 @@
 # TyTraCL (“Coordination Language”)
 
-This is the compiler for the TyTra Coordination Language, part of the [TyTra](http://www.tytra.org.uk) flow for high-level FPGA programming. TyTraCL is a functional language, intended to express the dataflow of computations on vectors (arrays of fixed size) using map and fold.
-
-The aim is to allow generation of variants of the program, calculate the cost and performance, and ultimately emit the TyTra-IR code to create the final HDL for the FPGA
-
-For more details, please read the paper in `docs`.
 
 ## PREREQUISITES:
 
@@ -20,7 +15,7 @@ The essential prerequisites to build and cost programs with the TyTraCL compiler
 
     # `git clone` the repo
 
-  Build using `stack`:
+  Buld using stack:
 
     # stack build
 
@@ -29,8 +24,13 @@ The essential prerequisites to build and cost programs with the TyTraCL compiler
   Call the compiler binary, passing in a file path and one or more transformation names to apply.
 
     $  stack exec bigbird-exe <input_file> [cleanup | autopar | inline]"
+    
+  Example input programs are provided in `./test/hllExmaples`
 
-  Example input programs are provided in `./test/hllExamples`
+
+
+
+
 
 #### Haskell
 
