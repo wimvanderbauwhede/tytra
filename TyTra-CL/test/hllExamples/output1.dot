@@ -1,0 +1,42 @@
+digraph G {
+u0[label="\"vout\""];
+u27[label="\"v1l\""];
+u28[label="\"v1r\""];
+u29[label="\"tuple of\""];
+u39[label="\"map\""];
+u40[label="\"f3\""];
+u44[label="\"fold []\""];
+u45[label="\"f2l\""];
+u46[label="\"s0\""];
+u47[label="\"v1l\""];
+u50[label="\"map\""];
+u51[label="\"f2r\""];
+u52[label="\"v1r\""];
+u59[label="\"unzip[]\""];
+u62[label="\"map\""];
+u63[label="\"f1\""];
+u64[label="\"vin\""];
+u67[label="\"map\""];
+u68[label="\"f1\""];
+u69[label="\"vin\""];
+u27 -> u0[label="\"( \\\"32 Float , 32 Float \\\" )\""];
+u27 -> u29[label="\"asdf\""];
+u28 -> u29[label="\"asdf\""];
+u39 -> u27[label="\"32 Float \""];
+u40 -> u39[label="\"\""];
+u44 -> u40[label="\"Float\""];
+u45 -> u44[label="\"Float\""];
+u46 -> u45[label="\"Float\""];
+u47 -> u44[label="\"32 Float Cost 32 del, 32 lat, Res:1024 luts,1024ram,0 mult depth: 1\""];
+u50 -> u39[label="\"32 Float Cost 32 del, 33 lat, Res:1025 luts,1025ram,1 mult depth: 2\""];
+u51 -> u50[label="\"\""];
+u52 -> u50[label="\"32 Float Cost 32 del, 32 lat, Res:1024 luts,1024ram,0 mult depth: 1\""];
+u59 -> u27[label="\"( \\\"32 Float , 32 Float \\\" )Cost 96 del, 97 lat, Res:3073 luts,3073ram,1 mult depth: 3\""];
+u59 -> u62[label="\"32 ( \\\"Float, Float\\\" ) \""];
+u63 -> u62[label="\"\""];
+u64 -> u62[label="\"32 Float Cost 32 del, 32 lat, Res:1024 luts,1024ram,0 mult depth: 1\""];
+u67 -> u59[label="\"32 ( \\\"Float, Float\\\" ) Cost 32 del, 33 lat, Res:1025 luts,1025ram,1 mult depth: 2\""];
+u68 -> u67[label="\"\""];
+u69 -> u67[label="\"32 Float Cost 32 del, 32 lat, Res:1024 luts,1024ram,0 mult depth: 1\""];
+
+}

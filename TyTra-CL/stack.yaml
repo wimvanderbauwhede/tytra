@@ -1,0 +1,11 @@
+flags: {}
+extra-package-dbs: []
+packages:
+- '.'
+extra-deps:
+- Zora-1.2.0
+- dotgen-0.4.2
+- fgl-visualize-0.1.0.1
+- indents-0.4.0.0
+- pretty-tree-0.1.0.0
+resolver: lts-6.26

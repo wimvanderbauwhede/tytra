@@ -1,0 +1,30 @@
+MkProgram [MkTypeDecl (MkName "p_in") [Vec (Prim Float) 100000] False,MkTypeDecl (MkName "p_out") [Vec (Prim Float) 100000] False,MkTypeDecl (MkName "f_sor") [Prim Float,Prim Float] False] (MkLetAssignment (MkLetLhs [MkName "p_out"]) (MkFunctionApplication (MkMapOccurence (MkFunctionOccurence (MkName "f_sor") [])) (MkVariable (MkName "p_in"))))
+
+
+Assign (Var (MkName "p_out") 100000 Float ) (Res (PNDMap [] (MOpaque (MkName "f_sor") [] Float Float Cost 1 del, 1 lat, Res:1 luts,1ram,1 mult ))
+ (Var (MkName "p_in") 100000 Float ))
+
+
+
+Cost 200000 del, 200001 lat, Res:6400001 luts,6400001ram,1 mult "5"
+Assign (Var (MkName "p_out") 100000 Float ) (Res (NDMerge [2]) (Res (PNDMap [2] (MOpaque (MkName "f_sor") [] Float Float Cost 1 del, 1 lat, Res:1 luts,1ram,1 mult ))
+ (Res (NDSplit [2]) (Var (MkName "p_in") 100000 Float ))
+))
+"9"
+"9"
+Cost 200000 del, 200001 lat, Res:6400001 luts,6400001ram,1 mult 
+
+
+Cost 200001 del, 250005 lat, Res:9600006 luts,9600006ram,6 mult Assign (Var (MkName "p_out") 100000 Float ) (Res (NDMerge [2]) (Res (PNDMap [2] (MOpaque (MkName "f_sor") [] Float Float Cost 1 del, 1 lat, Res:1 luts,1ram,1 mult ))
+ (Res (NDSplit [2]) (Var (MkName "p_in") 100000 Float ))
+))
+
+
+
+Assign (Var (MkName "p_out") 100000 Float ) (Res (NDMerge [2,2,2,2,2,5,5,5,5]) (Res (NDMap [(2,Pipe),(2,Pipe),(2,Pipe),(2,Pipe),(2,Pipe),(5,Pipe),(5,Pipe),(5,Pipe),(5,Pipe)] Par (MOpaque (MkName "f_sor") [] Float Float Cost 1 del, 1 lat, Res:1 luts,1ram,1 mult ))
+ (Res (NDSplit [2,2,2,2,2,5,5,5,5]) (Var (MkName "p_in") 100000 Float ))
+))
+
+
+
+100000 Float 

@@ -1,0 +1,13 @@
+p_in :: Vec 32 Vec 32 Float
+f_sor :: Float -> Float
+f_sor2 :: Float -> Float -> Float
+f_acc  :: Float -> Float -> Float
+p_out :: Vec 3 Float
+p_tmp :: Vec 32 Float
+p_tmp :: Vec 32 Float
+s_tmp2 :: Float
+acc :: Float
+p_tmp2 :: Vec 32 Float
+fix_test :: Fix 3.3
+
+p_out =  map (map f_sor) p_in

@@ -1,0 +1,22 @@
+vin :: Vec 32 Float
+v1 :: Vec 32 Float
+vout :: Vec 32 Float
+f1 :: Float -> (Float,Float)
+f2l :: Float -> Float -> Float    
+f2r :: Float -> Float 
+f3 :: Float -> Float -> Float
+v1l :: Vec 32 Float
+v1r :: Vec 32 Float
+s2l :: Float
+s0 :: Float
+v2r :: Vec 32 Float
+
+vout = let 
+    v1 = map f1 vin
+    (v1l,v1r) = unzip v1
+    s2l = fold f2l s0 v1l
+    v2r = map f2r v1r
+  in    
+    map (f3 s2l) v2r
+
+    

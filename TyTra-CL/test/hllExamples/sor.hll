@@ -1,0 +1,4 @@
+p_in :: Vec 100000 Float
+p_out :: Vec 100000 Float
+f_sor :: Float -> Float
+p_out = map f_sor p_in

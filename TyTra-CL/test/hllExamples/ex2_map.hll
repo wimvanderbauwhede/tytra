@@ -1,0 +1,5 @@
+p_in :: Vec 32 Float
+p_out :: Vec 32 Double
+foo :: Float -> Double 
+
+p_out = map foo p_in 

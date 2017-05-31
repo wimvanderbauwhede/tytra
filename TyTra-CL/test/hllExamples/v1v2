@@ -1,0 +1,17 @@
+v_in :: Vec 32 Float
+v1 :: Vec 32 Float
+v2 :: Vec 32 Float
+f1 :: Float -> Float
+f2 :: Float -> Float
+f3 :: Vec 32 (Float, Float) -> Vec 32 Float
+v1v2 :: Vec 32 (Float,Float)
+uv1 :: Vec 32 Float
+uv2 :: Vec 32 Float
+p_out :: (Float, Float)
+p_out = let
+  v1 = map f1 v_in
+	v2 = map f2 v_in
+	v1v2 = zip (v1, v2)
+	(uv1, uv2) = unzip v1v2
+  in
+	f3 v1v2

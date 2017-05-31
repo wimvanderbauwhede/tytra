@@ -1,0 +1,5 @@
+p_in :: Vec 32 Float
+p_out :: Vec 32 Float
+
+ 
+p_out = p_in 
